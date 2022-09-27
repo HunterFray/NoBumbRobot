@@ -1,0 +1,10 @@
+M1A=Pin0
+M1B=Pin1
+M2A=Pin2
+M2B-Pin3
+
+Display SDA=Pin6
+Display SCL=Pin7
+
+SensorTrigger=Pin4
+SensorEcho=Pin5
