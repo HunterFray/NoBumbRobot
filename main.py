@@ -4,6 +4,7 @@ from sh1106 import SH1106_I2C
 from hcsr04 import HCSR04
 from motor_driver import *
 import math
+import random
 
 #i2c = I2C(0, sda=Pin(6), scl=Pin(7), freq=400000)
 #oled = SH1106_I2C(128, 64, i2c)
@@ -25,10 +26,17 @@ def turn_left():
 def allstop():
     motor.brake()
 
-def stop_turn():
+def left_turn():
     motor.brake()
     utime.sleep(1)
-    motor.speed(0,50)
+    motor.speed(-50,50)
+
+def right_turn():
+    motor.brake()
+    utime.sleep(1)
+    motor.speed(50,-50)
+
+manouver = [left_turn, right_turn]
 
 def robot():
     distance = sensor.distance_cm()
@@ -48,7 +56,7 @@ def robot():
         #oled.text("Likely", 20,20)
         #oled.show()
         #allstop()
-        stop_turn()
+        random.choice(manouver)()
         utime.sleep(2)
         
 while True:            
