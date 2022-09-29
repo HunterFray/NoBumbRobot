@@ -8,7 +8,7 @@ import math
 #i2c = I2C(0, sda=Pin(6), scl=Pin(7), freq=400000)
 #oled = SH1106_I2C(128, 64, i2c)
 #oled.rotate
-sensor = HCSR04(trigger_pin=4, echo_pin=5, echo_timeout_us=1000000)
+sensor = HCSR04(trigger_pin=5, echo_pin=4, echo_timeout_us=1000000)
 distance = sensor.distance_cm()
 min_dist = 20
 motor = motor_driver(0,1,2,3) #Set pins for motor A and B  M1A=Pin0,M1B=Pin1,M2A=Pin3,M2B=Pin4
