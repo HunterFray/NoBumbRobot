@@ -11,7 +11,7 @@ import random
 #oled.rotate
 sensor = HCSR04(trigger_pin=5, echo_pin=4, echo_timeout_us=1000000)
 distance = sensor.distance_cm()
-min_dist = 20
+min_dist = 20 #min dist in centimetres
 motor = motor_driver(0,1,2,3) #Set pins for motor A and B  M1A=Pin0,M1B=Pin1,M2A=Pin3,M2B=Pin4
 
 def forward():
@@ -36,7 +36,7 @@ def right_turn():
     utime.sleep(1)
     motor.speed(50,-50)
 
-manouver = [left_turn, right_turn]
+manouver = [left_turn, right_turn] #randomise which way the robot will turn when an obstacle is detected
 
 def robot():
     distance = sensor.distance_cm()
