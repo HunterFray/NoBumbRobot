@@ -14,7 +14,7 @@ min_dist = 20
 motor = motor_driver(0,1,2,3) #Set pins for motor A and B  M1A=Pin0,M1B=Pin1,M2A=Pin3,M2B=Pin4
 
 def forward():
-    motor.speed(75,75)
+    motor.speed(100,100)
     
 def reverse():
     motor.speed(-50,-50)
