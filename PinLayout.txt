@@ -1,7 +1,7 @@
-M1A=Pin0
-M1B=Pin1
-M2A=Pin2
-M2B-Pin3
+M1A=Pin18
+M1B=Pin19
+M2A=Pin20
+M2B-Pin21
 
 Display SDA=Pin6
 Display SCL=Pin7
