@@ -12,7 +12,7 @@ import random
 sensor = HCSR04(trigger_pin=5, echo_pin=4, echo_timeout_us=1000000)
 distance = sensor.distance_cm()
 min_dist = 20
-motor = motor_driver(0,1,2,3) #Set pins for motor A and B  M1A=Pin0,M1B=Pin1,M2A=Pin3,M2B=Pin4
+motor = motor_driver(18,19,20,21) #Set pins for motor A and B  M1A=Pin0,M1B=Pin1,M2A=Pin3,M2B=Pin4
 
 def forward():
     motor.speed(100,100)
